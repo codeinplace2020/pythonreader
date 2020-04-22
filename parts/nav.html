@@ -1,0 +1,142 @@
+
+% if sticky:
+<nav id="mainNav" class="navbar sticky-top navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+% else:
+<nav id="mainNav" class="navbar navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+% end
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="{{pathToRoot}}index.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="{{pathToRoot}}lectures/1-Welcome/"
+							>
+								1. Welcome
+							</a>
+							<a class="dropdown-item" href="{{pathToRoot}}lectures/2-ControlFlow/">
+								2. Control Flow
+							</a>
+							<a class="dropdown-item" href="{{pathToRoot}}lectures/3-Decomposition/">
+								3. Decomposition
+							</a>
+							<a class="dropdown-item" href="{{pathToRoot}}lectures/4-Variables/">
+								4. Variables
+							</a>
+							<a class="dropdown-item" href="{{pathToRoot}}lectures/5-ArithmeticExpressions/">
+								5. Arithmetic Expressions
+							</a>
+							<a class="dropdown-item" href="{{pathToRoot}}lectures/6-ControlFlowRevisited/">
+								6. Control Flow Revisited
+							</a>
+							<a class="dropdown-item" href="{{pathToRoot}}lectures/7-FunctionsAndParameters/">
+								7. Functions Revisited
+							</a>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="{{pathToRoot}}assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="{{pathToRoot}}assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="{{pathToRoot}}section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="{{pathToRoot}}section/section1/Section1.zip">
+								Section 1 Project
+							</a>
+							<a class="dropdown-item" href="https://repl.it/@brahmcapoor/CS106AKarelSection" target="_blank">
+								Section 1 Online IDE
+							</a>
+							<a class="dropdown-item" href="{{pathToRoot}}section/section1/section1-soln.html">
+								Section 1 Solutions
+							</a>
+							<!-- <hr />
+							<a class="dropdown-item" href="{{pathToRoot}}section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="https://us.edstem.org/courses/325/lessons/1113" target="_blank">
+								Section 2 Online IDE
+							</a>
+							<!-- <a class="dropdown-item" href="{{pathToRoot}}section/section2/section2-soln.html">
+								Section 2 Solutions
+							</a> --> 
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="{{pathToRoot}}handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="{{pathToRoot}}handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href={{pathToRoot}}handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href={{pathToRoot}}handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href={{pathToRoot}}assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href={{pathToRoot}}handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="{{pathToRoot}}schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>

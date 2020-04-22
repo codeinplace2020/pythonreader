@@ -1,0 +1,459 @@
+<!--
+
+    Assns:
+    1. Karel
+    2. Simple Java
+    3. Breakout
+    4. Hangman
+    5. Yahtzee
+    6. NameSurfer
+    7. FacePamphlet
+-->
+
+<div class="table-responsive">
+<table class="table table-bordered">
+<thead>
+<tr>
+<th style="width:10%">Week</th>
+<th style="width:30%">Monday</th>
+<th style="width:30%">Wednesday</th>
+<th style="width:30%">Friday</th>
+</tr>
+</thead>
+
+<!-- Week 1 -->
+<tr>
+<td class="calendarWeekCell">1</td>
+<%
+
+  data = {
+    "lectureNumber" : 1,
+    "date" : "Apr 6th",
+    "name" : "Welcome to CS106A",
+    "hide" : False,
+    "subtitle":"",
+    "slides": "lectures/1-Welcome/1-Welcome.pdf",
+    "notes2" : "",
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+  data = {
+    "lectureNumber" : 2,
+    "date" : "Apr 8th",
+    "name" : "Control Structures",
+    "hide" : False,
+    "slides": "lectures/2-ControlFlow/2-ControlFlow.pdf",
+    "subtitle":"",
+    "notes2": "Assignment 1 out"
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+  data = {
+    "lectureNumber" : 3,
+    "date" : "Apr 10th",
+    "name" : "Functions & Decomposition",
+    "hide" : False,
+    "slides": "lectures/3-Decomposition/3-Decomposition.pdf",
+    "subtitle":""
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+%>
+</tr>
+
+<!-- Week 2 -->
+<tr>
+<td class="calendarWeekCell">2</td>
+<%
+  data = {
+    "lectureNumber" : 4,
+    "date" : "Apr 13th",
+    "name" : "Introduction to Python & Variables",
+    "hide" : False,
+    "slides": "lectures/4-Variables/4-Variables.pdf",
+    "subtitle":"",
+    "notes2" : "",
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+  data = {
+    "lectureNumber" : 5,
+    "date" : "Apr 15th",
+    "name" : "Arithmetic Expressions",
+    "hide" : False,
+    "subtitle":"",
+    "slides": "lectures/5-ArithmeticExpressions/5-ArithmeticExpressions.pdf",
+    "notes2" : "",
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+  data = {
+    "lectureNumber" : 6,
+    "date" : "Apr 17th",
+    "name" : "Control Flow Revisited",
+    "hide" : False,
+    "subtitle":"",
+    "slides":"lectures/6-ControlFlowRevisited/6-ControlFlowRevisited.pdf",
+    "notes1": "Assignment 1 Due",
+    "notes2" : "Assignment 2 Out",
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+%>
+</tr>
+
+<!-- Week 3 -->
+<tr>
+<td class="calendarWeekCell">3</td>
+<%
+  data = {
+    "lectureNumber" : 7,
+    "date" : "Apr 20th",
+    "name" : "Functions Revisited",
+    "hide" : False,
+    "subtitle":"",
+    "slides": "lectures/7-FunctionsAndParameters/7-FunctionsAndParameters.pdf",
+    "notes2" : "",
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+  data = {
+    "lectureNumber" : 8,
+    "date" : "Apr 22th",
+    "slides": "",
+    "hide" : True,
+    "name" : "More Parameters",
+    "subtitle":"",
+    "notes2" : "",
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+  data = {
+    "lectureNumber" : 9,
+    "date" : "Apr 24th",
+    "name" : "Images",
+    "hide" : True,
+    "subtitle":"",
+    "extra" : {
+      "link":"https://arxiv.org/pdf/1906.01811.pdf",
+      "text":"Visual Acuity Test"
+    },
+    "notes1" : "Assignment 2 Due",
+    "notes2" : "Assignment 3 Out",
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+%>
+</tr>
+
+<!-- Week 4 -->
+<tr>
+<td class="calendarWeekCell">4</td>
+<%
+  data = {
+    "lectureNumber" : 10,
+    "date" : "Apr 27th",
+    "name" : "In-Class Diagnostic Assessment I",
+    "hide" : True,
+    "subtitle":"",
+    "extra" : {
+      "link":"http://stanford.edu/~cpiech/bio/papers/homeworkVariance.pdf",
+      "text":"Variability of Code"
+    },
+    "notes2" : "",
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+  data = {
+    "lectureNumber" : 11,
+    "date" : "Apr 29th",
+    "name" : "Canvas",
+    "hide" : True,
+    "slides": "lectures/lecture8/8 - GenerativeGrading.pdf",
+    "subtitle":"",
+    "extra" : {
+      "link":"http://stanford.edu/~cpiech/bio/papers/zeroShotCode.pdf",
+      "text":"Rubric Sampling"
+    },
+    "notes2" : "",
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+  data = {
+    "lectureNumber" : 12,
+    "date" : "May 1st",
+    "name" : "Graphical Animation",
+    "hide" : True,
+    "subtitle":"",
+    "extra" : {
+      "link":"https://arxiv.org/pdf/1906.01811.pdf",
+      "text":"Visual Acuity Test"
+    },
+    "notes2" : "",
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+%>
+</tr>
+
+<!-- Week 5 -->
+<tr>
+<td class="calendarWeekCell">5</td>
+<%
+  data = {
+    "lectureNumber" : 13,
+    "date" : "May 4th",
+    "hide" : True,
+   "name" : "Lists",
+   "slides": "lectures/lecture9/9 - GenerativeGrading2.pdf",
+    "subtitle":""
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+  data = {
+    "lectureNumber" : 14,
+    "date" : "May 6th",
+    "hide" : True,
+    "slides": "lectures/lecture10/10 - Approxiate Parsing.pdf",
+    "name" : "Ranges and lists of lists",
+    "subtitle":"",
+    "notes1": "Assignment 3 Due",
+    "notes2" : "Assignment 4 Out",
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+  data = {
+    "lectureNumber" : 15,
+    "date" : "May 8rd",
+    "name" : "Strings",
+    "hide" : True,
+    "subtitle":"",
+    "extra" : {
+      "link":"https://arxiv.org/pdf/1906.01811.pdf",
+      "text":"Visual Acuity Test"
+    },
+    "notes2" : "",
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+%>
+</tr>
+
+<!-- Week 6 -->
+<tr>
+<td class="calendarWeekCell">6</td>
+<%
+  data = {
+    "lectureNumber" : 16,
+    "date" : "May 11th",
+    "hide" : True,
+    "slides":"lectures/lecture11/11 - Process.pdf",
+    "name" : "Files",
+    "subtitle":"",
+    "notes2" : "",
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+  data = {
+    "lectureNumber" : 17,
+    "date" : "May 13th",
+    "hide" : True,
+    "slides":"lectures/lecture12/12 - DigitalTools.pdf",
+    "name" : "String Parsing",
+    "subtitle":"",
+    "notes2" : "",
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+  data = {
+    "lectureNumber" : 18,
+    "date" : "May 15th",
+    "name" : "Dictionaries",
+    "hide" : True,
+    "subtitle":"",
+    "extra" : {
+      "link":"https://arxiv.org/pdf/1906.01811.pdf",
+      "text":"Visual Acuity Test"
+    },
+    "notes1": "Assignment 4 Due",
+    "notes2" : "Assignment 5 Out",
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+%>
+</tr>
+
+<!-- Week 7 -->
+<tr>
+<td class="calendarWeekCell">7</td>
+<%
+  data = {
+    "lectureNumber" : 19,
+    "hide": True,
+    "date" : "May 18th",
+    "name" : "Nested Data Structures",
+    "subtitle":"",
+    "notes2" : "",
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+  data = {
+    "lectureNumber" : 20,
+    "hide": False,
+    "date" : "May 20th",
+     "hide" : True,
+    "slides":"lectures/lecture14/14 - PeerEducation.pdf",
+    "name" : "Sorting & Tuples",
+    "subtitle":""
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+  data = {
+    "lectureNumber" : 21,
+    "date" : "May 22nd",
+    "name" : "Classes & Objects",
+    "hide" : True,
+    "subtitle":"",
+    "extra" : {
+      "link":"https://arxiv.org/pdf/1906.01811.pdf",
+      "text":"Visual Acuity Test"
+    },
+    "notes1": "Assignment 5 Due",
+    "notes2" : "Assignment 6 Out",
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+%>
+</tr>
+
+<!-- Week 8 -->
+<tr>
+<td class="calendarWeekCell">8</td>
+<%
+  data = {
+    "lectureNumber" : 22,
+    "hide": True,
+    "date" : "May 25th",
+    "name" : "Memorial Day",
+    "subtitle":"No Class",
+    "notes2" : "",
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+  data = {
+    "lectureNumber" : 23,
+    "hide": True,
+    "date" : "May 27th",
+    "name" : "Memory",
+    "subtitle":"",
+    "notes2" : "",
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+  data = {
+    "lectureNumber" : 24,
+    "date" : "May 29th",
+    "hide" : True,
+    "name" : "Internet",
+    "subtitle":"",
+    "extra" : {
+      "link":"https://arxiv.org/pdf/1906.01811.pdf",
+      "text":"Visual Acuity Test"
+    },
+    "notes2" : "",
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+%>
+</tr>
+
+<!-- Week 9 -->
+<tr>
+<td class="calendarWeekCell">9</td>
+<%
+  data = {
+    "lectureNumber" : 25,
+    "date" : "June 1st",
+    "hide" : True,
+    "name" : "Internet II & Data Visualization",
+    "subtitle":"",
+    "notes1": "Assignment 6 Due",
+    "notes2": "Assignment 7 Out"
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+  data = {
+    "lectureNumber" : 26,
+    "hide": True,
+    "date" : "June 3rd",
+    "name" : "Advanced Python",
+    "subtitle":"",
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+  data = {
+    "lectureNumber" : 27,
+    "date" : "June 5th",
+    "name" : "Life after CS 106A",
+    "hide" : True,
+    "subtitle":"",
+    "extra" : {
+      "link":"https://arxiv.org/pdf/1906.01811.pdf",
+      "text":"Visual Acuity Test"
+    },
+    "notes2" : "",
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+%>
+</tr>
+
+
+
+<!-- Week 10 -->
+<tr>
+<td class="calendarWeekCell">10</td>
+<%
+  data = {
+    "lectureNumber" : 28,
+    "hide": True,
+    "date" : "June 8th",
+    "name" : "Conclusions",
+    "subtitle":"",
+    "slides": "lectures/1 - Welcome.pdf",
+    "lectureNotes": "lectureNotes/1 - Counting.pdf",
+    "notes2" : "",
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+  data = {
+    "lectureNumber" : 29,
+    "hide": True,
+    "date" : "June 10th",
+    "lectureNotes": "lectureNotes/2 - Combinatorics.pdf",
+    "slides": "lectures/2 - Combinatorics.pdf",
+    "name" : "",
+    "subtitle":"No Class",
+    "notes2" : "Assignment 7 Due",
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+  data = {
+    "lectureNumber" : 30,
+    "date" : "June 12th",
+    "name" : "",
+    "hide" : True,
+    "subtitle":"No Class",
+    "extra" : {
+      "link":"https://arxiv.org/pdf/1906.01811.pdf",
+      "text":"Visual Acuity Test"
+    },
+    "notes2" : "",
+  }
+  include('templates/parts/scheduleDay.html', data=data)
+
+%>
+</tr>
+
+
+</table>
+</div>
