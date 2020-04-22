@@ -79,14 +79,6 @@ TypeError: can only concatenate str (not "int") to str
 
 <h2>Interpreter Hacks: dir help</h2>
 
-<p>What are all the functions that the <code>str</code> type has? You could look it up, but it's also possible in the interpreter to pull the list of function names directly out of Python this (<code>str</code> is the name of the built-int string type):
-
-<pre>
->>> <b>dir(str)</b>
-['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
-</pre>
-
-<p>The above is not the most pretty form of the data, as we're just dumping the names of Python's internal structure.  Names that begin with 2 underbars like <code>__add__</code> are special internal functions that code does not normally need to know about. You can see regular functions like <code>lower()</code> and 'find()` in the list.
 
 <p>With the special <b>help</b> function, you can pull up the PyDoc for each function (the triple-quote comments for a function). To refer to a function within the <code>str</code> type use the form <code>str.find</code>. Note that the function name is <b>not</b> followed by parenthesis - this is the unusual case of referring to a function but not calling it.
 
