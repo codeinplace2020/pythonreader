@@ -13,7 +13,7 @@ ROOT = 'pythonreader'
 OUT_DIR = 'en'
 
 # Use the -t flag if you want to compile for local tests
-DEPLOY = not '-t' in sys.argv
+DEPLOY = False
 
 class Compiler(object):
 

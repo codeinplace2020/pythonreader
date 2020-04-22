@@ -13,23 +13,23 @@
 
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="../pythonreader../css/style.css">
+<link rel="stylesheet" type="text/css" href="../../../css/style.css">
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
 <!-- Java Script -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="../pythonreaderplugins/moment.min.js"></script>
+<script src="../../plugins/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <!-- Python highlighting -->
-<script src="../pythonreaderplugins/prism/prism.js"></script>
-<link href="../pythonreaderplugins/prism/prism.css" rel="stylesheet" />
+<script src="../../plugins/prism/prism.js"></script>
+<link href="../../plugins/prism/prism.css" rel="stylesheet" />
 
 <!-- Probability Packages -->
-<script src="../pythonreaderplugins/probability/gaussian.js"></script>
-<script src="../pythonreaderplugins/color.js"></script>
+<script src="../../plugins/probability/gaussian.js"></script>
+<script src="../../plugins/color.js"></script>
 
 <!-- font awesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
@@ -47,7 +47,7 @@
   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 </script>
 
-<script src="../pythonreaderplugins/math.min.js"></script>
+<script src="../../plugins/math.min.js"></script>
 <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
 
@@ -131,7 +131,7 @@ ValueError: invalid literal for int() with base 10: 'xx1234'
 
 <p>Chars are accessed with zero-based indexing with square brackets, so the first chars is index 0, the next index 1, and the last char is at index len-1. 
 
-<p><img src="../pythonreaderimg/pythonreader/strings/python-str-index.png" alt="string 'Python' shown with index numbers 0..5">
+<p><img src="../../img/pythonreader/strings/python-str-index.png" alt="string 'Python' shown with index numbers 0..5">
 
 <p>Accessing a too large index number is an error. Strings are immutable, so they cannot be changed once created. Code to compute a different string always creates a new string in memory to represent the result (e.g. + below), leaving the original strings unchanged.
 
@@ -202,7 +202,7 @@ Here are the most useful Python string functions (mostly noun.verb form):
 
 <p>The characters that make up a string can be divided into several categories or "character classes":
 
-<p><img src=../pythonreaderimg/pythonreader/strings/python-charclass.png alt="alt: divide chars into alpha (lower/upper), digit, space, and misc leftovers">
+<p><img src=../../img/pythonreader/strings/python-charclass.png alt="alt: divide chars into alpha (lower/upper), digit, space, and misc leftovers">
 
 <p><b>alphabetic</b> chars - e.g. <code>'abcXYZ'</code> that make words. Alphabetic chars are further divided into upper and lowercase versions (the details depend on the particular unicode alphabet).
 
@@ -445,7 +445,7 @@ for char in s:
 <a name=slice>
 <h2>String Slices</h2>
 
-<img src=../pythonreaderimg/pythonreader/strings/python-str-index.png alt="string 'Python' shown with index numbers 0..5">
+<img src=../../img/pythonreader/strings/python-str-index.png alt="string 'Python' shown with index numbers 0..5">
 
 <p>Slice syntax is a powerful way to refer to sub-parts of a string instead of just 1 char. s[ <i>start</i> : <i>end</i> ] - returns a substring from s beginning at <i>start</i> index, running up to but not including <i>end</i> index. If the start index is omitted, starts from the beginning of the string. If the end index is omitted, runs through the end of the string. If the start index is equal to the end index, the slices is the empty string.
 
