@@ -13,21 +13,21 @@
 
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="//web.stanford.edu/class/cs106a/css/style.css">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
 
 <!-- Java Script -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="//web.stanford.edu/class/cs106a/plugins/moment.min.js"></script>
+<script src="../plugins/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <!-- Python highlighting -->
-<script src="//web.stanford.edu/class/cs106a/plugins/prism/prism.js"></script>
-<link href="//web.stanford.edu/class/cs106a/plugins/prism/prism.css" rel="stylesheet" />
+<script src="../plugins/prism/prism.js"></script>
+<link href="../plugins/prism/prism.css" rel="stylesheet" />
 
 <!-- Probability Packages -->
-<script src="//web.stanford.edu/class/cs106a/plugins/probability/gaussian.js"></script>
-<script src="//web.stanford.edu/class/cs106a/plugins/color.js"></script>
+<script src="../plugins/probability/gaussian.js"></script>
+<script src="../plugins/color.js"></script>
 
 <!-- font awesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
@@ -45,7 +45,7 @@
   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 </script>
 
-<script src="//web.stanford.edu/class/cs106a/plugins/math.min.js"></script>
+<script src="../plugins/math.min.js"></script>
 <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
 </head>
@@ -73,7 +73,7 @@ x = 42
 </pre>
 
 <p>
-<img src=//web.stanford.edu/class/cs106a/img/pythonreader/variables/py-var1.png alt="variable name x refers to int value 42">
+<img src=../img/pythonreader/variables/py-var1.png alt="variable name x refers to int value 42">
 
 
 <p>Later in the code, appearances of that variable name, e.g.  <code class=b>x</code>, retrieve its current value, in this case 42. <!-- I figure this doesn't really require explanation .. they've seen vars in math so much -->
@@ -93,7 +93,7 @@ z = y
 </pre>
 
 <p>
-<img src=//web.stanford.edu/class/cs106a/img/pythonreader/variables/py-var2.png alt="variable x refers to 10, variable y refers to 'bye', z refers to the same 'bye'">
+<img src=../img/pythonreader/variables/py-var2.png alt="variable x refers to 10, variable y refers to 'bye', z refers to the same 'bye'">
 
 
 <!--
@@ -135,7 +135,7 @@ b = 13
 </pre>
 
 <p>
-<img src=//web.stanford.edu/class/cs106a/img/pythonreader/variables/py-varswap1.png alt="before swap: a is 42, b is 13">
+<img src=../img/pythonreader/variables/py-varswap1.png alt="before swap: a is 42, b is 13">
 
 
 <p>It might seem that one can begin with <code>a = b</code>, but this does not work, since it overwrites and thus loses the original value of <code>a</code>. The classic 3-line solution uses a temporary variable named "temp" to hold this value during the swap, like this:
@@ -149,7 +149,7 @@ b = temp
 <p>Starting with the above diagram, you can trace through the three assignments, leading to this memory structure:
 
 <p>
-<img src=//web.stanford.edu/class/cs106a/img/pythonreader/variables/py-varswap2.png alt="after swap: a is 13, b is 42, temp is 42">
+<img src=../img/pythonreader/variables/py-varswap2.png alt="after swap: a is 13, b is 42, temp is 42">
 
 
 <h2>Assignment <code>=</code> is Shallow</h2>
