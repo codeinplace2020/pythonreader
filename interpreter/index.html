@@ -1,0 +1,278 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="//web.stanford.edu/class/cs106a/css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="//web.stanford.edu/class/cs106a/plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="//web.stanford.edu/class/cs106a/plugins/prism/prism.js"></script>
+<link href="//web.stanford.edu/class/cs106a/plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="//web.stanford.edu/class/cs106a/plugins/probability/gaussian.js"></script>
+<script src="//web.stanford.edu/class/cs106a/plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="//web.stanford.edu/class/cs106a/plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</head>
+
+<body>
+
+<nav id="mainNav" class="navbar navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="//web.stanford.edu/class/cs106a/index.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="//web.stanford.edu/class/cs106a/lectures/1-Welcome/"
+							>
+								1. Welcome
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/2-ControlFlow/">
+								2. Control Flow
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/3-Decomposition/">
+								3. Decomposition
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/4-Variables/">
+								4. Variables
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/5-ArithmeticExpressions/">
+								5. Arithmetic Expressions
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/6-ControlFlowRevisited/">
+								6. Control Flow Revisited
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/7-FunctionsAndParameters/">
+								7. Functions Revisited
+							</a>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="//web.stanford.edu/class/cs106a/assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="//web.stanford.edu/class/cs106a/section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/section/section1/Section1.zip">
+								Section 1 Project
+							</a>
+							<a class="dropdown-item" href="https://repl.it/@brahmcapoor/CS106AKarelSection" target="_blank">
+								Section 1 Online IDE
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/section/section1/section1-soln.html">
+								Section 1 Solutions
+							</a>
+							<!-- <hr />
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="https://us.edstem.org/courses/325/lessons/1113" target="_blank">
+								Section 2 Online IDE
+							</a>
+							<!-- <a class="dropdown-item" href="//web.stanford.edu/class/cs106a/section/section2/section2-soln.html">
+								Section 2 Solutions
+							</a> --> 
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=//web.stanford.edu/class/cs106a/handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=//web.stanford.edu/class/cs106a/handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=//web.stanford.edu/class/cs106a/assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=//web.stanford.edu/class/cs106a/handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="//web.stanford.edu/class/cs106a/schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>    <div class="container">
+
+
+
+<h1>Python Interpreter</h1>
+
+<p>You write your Python code in a text file with a name like <code>hello.py</code>. How does that code Run? There is program installed on your computer named "python3" or "python", and its job is looking at and running your Python code. This type of program is called an "interpreter".
+
+<h2>Talk To The Interpreter</h2>
+
+<p>A nice benefit of using an interpreter is that you can start interactive version of the interpreter and type Python code right into it to see what it does. What happens if you use <code>+</code> in Python code like this: <code>'hello' + 3</code>?
+
+<p>You could look up the answer to this, but a very quick way to find out is to type code into the interpreter and see what it does.
+
+<p>There are 3 ways to get the interpreter:
+
+<p>1. On parlante.org, use the <a href='https://parlante.org/console'>hack mode interpreter</a> page (there's a button at bottom of each problem page).
+This is kind of a nick science-project experiment, but it has the virtue that it works in the browser and doesn't depend on having Python installed on your computer.
+
+<p>2. Open a command-line terminal. Mac: run the "Terminal" app in the Utilities folder. Windows: type "powershell" in the lower left, this opens the Windows command line terminal. In the terminal type the command "python3" ("python" on Windows). This runs the interpreter program directly. Type ctrl-d to exit when done (on Windows ctrl-z).
+
+<p>3. If you have PyCharm installed, at the lower-left of any window, click the Python Console tab. Or use the Tools &gt; Python Console menu item.
+
+<h2>Working With The Interpreter</h2>
+
+<p>The interpreter prints a ">>>" prompt and waits for you to type some Python code. It reads what you type, evaluates it, and prints the result - the so called read-eval-print loop (here what the user types is shown in bold)
+
+<pre>
+>>> <b>1 + 2 * 3</b>
+7
+>>> <b>'hello' + 'there'</b>
+'hellothere'
+>>> <b>max(1, 5, -2)</b>
+5
+>>> <b>'hello' + 2</b>
+TypeError: can only concatenate str (not "int") to str
+</pre>
+
+<p>This is an excellent way to experiment with Python features to see how they work. If you have some code you are thinking about, it can be quick and informative to fire up the interpreter, and type the code in to see what it does.
+
+<h2>Indent In Interpreter</h2>
+
+<p>It's possible to write multi-line indented code in the interpreter. If a line is not finished, such as ending with ":", hitting return does not run the code right away. You can write further indented lines. When you enter a blank line, the interpreter runs the whole thing. (For throw-away code like this, I am willing to indent just 2 spaces).
+
+<pre>
+>>> for i in range(10):
+...   mult = i * 100
+...   print(i, mult)
+... 
+0 0
+1 100
+2 200
+3 300
+4 400
+5 500
+6 600
+7 700
+8 800
+9 900
+</pre>
+
+<h2>Interpreter Hacks: dir help</h2>
+
+<p>What are all the functions that the <code>str</code> type has? You could look it up, but it's also possible in the interpreter to pull the list of function names directly out of Python this (<code>str</code> is the name of the built-int string type):
+
+<pre>
+>>> <b>dir(str)</b>
+['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+</pre>
+
+<p>The above is not the most pretty form of the data, as we're just dumping the names of Python's internal structure.  Names that begin with 2 underbars like <code>__add__</code> are special internal functions that code does not normally need to know about. You can see regular functions like <code>lower()</code> and 'find()` in the list.
+
+<p>With the special <b>help</b> function, you can pull up the PyDoc for each function (the triple-quote comments for a function). To refer to a function within the <code>str</code> type use the form <code>str.find</code>. Note that the function name is <b>not</b> followed by parenthesis - this is the unusual case of referring to a function but not calling it.
+
+<pre>
+>>> <b>help(str.find)</b>
+find(...)
+    S.find(sub[, start[, end]]) -> int
+    
+    Return the lowest index in S where substring sub is found,
+    such that sub is contained within S[start:end].  Optional
+    arguments start and end are interpreted as in slice notation.
+    
+    Return -1 on failure.
+</pre>
+
+
+</div></body></html>

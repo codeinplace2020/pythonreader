@@ -1,0 +1,384 @@
+<!doctype html>
+<!doctype html>
+
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="//web.stanford.edu/class/cs106a/css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="//web.stanford.edu/class/cs106a/plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="//web.stanford.edu/class/cs106a/plugins/prism/prism.js"></script>
+<link href="//web.stanford.edu/class/cs106a/plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="//web.stanford.edu/class/cs106a/plugins/probability/gaussian.js"></script>
+<script src="//web.stanford.edu/class/cs106a/plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="//web.stanford.edu/class/cs106a/plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</head>
+
+<body>
+
+<nav id="mainNav" class="navbar navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="//web.stanford.edu/class/cs106a/index.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="//web.stanford.edu/class/cs106a/lectures/1-Welcome/"
+							>
+								1. Welcome
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/2-ControlFlow/">
+								2. Control Flow
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/3-Decomposition/">
+								3. Decomposition
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/4-Variables/">
+								4. Variables
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/5-ArithmeticExpressions/">
+								5. Arithmetic Expressions
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/6-ControlFlowRevisited/">
+								6. Control Flow Revisited
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/7-FunctionsAndParameters/">
+								7. Functions Revisited
+							</a>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="//web.stanford.edu/class/cs106a/assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="//web.stanford.edu/class/cs106a/section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/section/section1/Section1.zip">
+								Section 1 Project
+							</a>
+							<a class="dropdown-item" href="https://repl.it/@brahmcapoor/CS106AKarelSection" target="_blank">
+								Section 1 Online IDE
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/section/section1/section1-soln.html">
+								Section 1 Solutions
+							</a>
+							<!-- <hr />
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="https://us.edstem.org/courses/325/lessons/1113" target="_blank">
+								Section 2 Online IDE
+							</a>
+							<!-- <a class="dropdown-item" href="//web.stanford.edu/class/cs106a/section/section2/section2-soln.html">
+								Section 2 Solutions
+							</a> --> 
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=//web.stanford.edu/class/cs106a/handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=//web.stanford.edu/class/cs106a/handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=//web.stanford.edu/class/cs106a/assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=//web.stanford.edu/class/cs106a/handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="//web.stanford.edu/class/cs106a/schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>  <div class="container">
+    <script>
+// arg is button followed by div which it does show/hide alternately
+function showHide(button) {
+  if (button.nextElementSibling.style.display == "block") {
+    button.nextElementSibling.style.display = "none";
+  } else {
+    button.nextElementSibling.style.display = "block";
+  }
+}
+</script>
+
+
+<h1>Python Does Not Copy</h1>
+
+<p>Python has a very consistent way of handling memory between lines of code or between functions - there is just one string, or list, or dict, and references to that one proliferate across the lines.
+
+<!-- njp more here -->
+
+<h2>Python Does Not Copy #1 - Lists</h2>
+
+<p>Suppose your code is manipulating a string or list or dict, and so has a reference to this structure. What happens if there is an assignment <code>=</code>? Does this result in two lists?
+
+
+<pre>
+>>> lst = [1, 2]
+>>> lst2 = lst
+</pre>
+
+<p>No, there is just the one list. The <code>=</code> works in a "shallow" way, creating an additional reference to the one list.
+
+<p>
+<img src=//web.stanford.edu/class/cs106a/img/pythonreader/copying/python-nocopy1.png alt="alt:lst and lst2 point to the same list">
+
+<p>Python always works this way - there is just one list or dict or whatever the code created explicitly, e.g. in this case <code>[1, 2]</code>, and then references to that one list are spread around.
+
+<p>We can observe that there's just one list, since changes made on the <code>lst2</code> variable can be seen on the <code>lst</code> variable.
+
+<pre>
+>>> lst
+[1, 2]
+>>> lst2.append(3)
+>>> lst2
+[1, 2, 3]
+>>> 
+>>> lst    # shows there was just one list
+[1, 2, 3]
+</pre>
+
+<h2>Python Does Not Copy #2 - Nesting</h2>
+
+<p>Suppose there is a dictionary <code>d</code>, and a list is stored as a value inside it. What happens when code refers to that list inside the dict? Does that make a copy?
+
+<p>No copy is made. There is the one list inside of the dict, and <code>lst</code> points to that list, even though it is nested inside of something else.
+
+<p>
+<img src=//web.stanford.edu/class/cs106a/img/pythonreader/copying/python-nocopy2.png alt="alt:lst points to list inside of dict">
+
+
+<pre>
+>>> d = {}
+>>> d['a'] = [1, 2]  # put list inside of dict
+>>> d
+{'a': [1, 2]}
+>>>
+>>> lst = d['a']     # a reference to the list
+>>> lst
+[1, 2]
+</pre>
+
+<p>As before, we can observe that there is one list with multiple references by changing it.
+
+<pre>
+>>> lst = d['a']
+>>> lst.append(3)
+>>> lst
+[1, 2, 3]
+>>> 
+>>> d     # Observe the list within d is changed too
+{'a': [1, 2, 3]}
+</pre>
+
+<h2>Python Does Not Copy #2a - Nesting Again</h2>
+
+<p>Say we have the above case with the list inside the dict at key 'a'. The expression <code>d['a']</code> is a reference to that list. This means the expression <code>d['a']</code> can be used in code to examine or modify that list.
+
+<pre>
+>>> d = {}
+>>> d['a'] = [1, 2]
+>>> d['a']             # look at list
+[1, 2]
+>>> d['a'].append(13)  # refer to list and change it
+>>> d['a'] 
+[1, 2, 13]
+</pre>
+
+<h2>Python Does Not Copy #3 - Parameters and Return</h2>
+
+<p>Suppose we have this code
+
+<pre>
+def exclaim(strs):
+    """
+    Modifies the strs list,
+    appending '!' to each str element.
+    """
+    for i in range(len(strs)):
+        strs[i] += '!'
+
+
+def caller():
+    lst = ['a', 'b', 'c']
+
+    exclaim(lst)
+    # what's in lst now?
+</pre>
+
+<p>What happens when exclaim() is called, passing in the list of strings? Does this make a copy of the list? No, like before, there is never a copy.
+
+<p>
+<img src=//web.stanford.edu/class/cs106a/img/pythonreader/copying/python-nocopy3.png alt="alt:caller and called function point to same memory">
+
+
+<p>The called function exclaim() just gets a reference to the list that caller created.
+
+<h2>Caller / Called Functions Share Memory = Communicate Changes</h2>
+
+<p>Because the called and caller functions share the one list, that means that changes made by the called function are seen by the caller function - it's just the one data structure being worked on by 2 or more functions.
+
+<p>This is a form of data communication from the called function back to the caller, but it is not so crisp as using <b>return</b>. With return, we see an explicit line with an expression, and that is the value being returned.
+
+<p>In contrast, this "shallow" communication, which is a fine technique, is more broad. The contract of the exclaim() function is that whatever list the caller provides, it is going to be modified.
+
+<!--
+
+<h2>Experiment 1 - Exclaim In The Interpreter</h2>
+
+
+<p>For the demo, writing this def right in the >>> interpreter, although normally we write defs in PyCharm so we can edit and use them.
+
+<p>Look at this code. What is the english translation of what it does?
+
+<pre>
+>>> def exclaim(strs):
+...   for i in range(len(strs)):
+...     strs[i] += '!'
+... 
+>>> exclaim
+<function exclaim at 0x10cbcba28>
+>>> 
+>>> 
+>>> lst = ['a', 'b' ,'c']
+>>> exclaim(lst)
+>>> 
+>>> # what does list look like now?
+... 
+>>> lst
+['a!', 'b!', 'c!']
+</pre>
+
+<p>Conclusion: there is one list or dict, references to that one get passed between functions. Modifications made in one function show up in the others.
+
+
+<h2>Experiment 2 - What Does = Do Again?</h2>
+
+<p>What does this do <code>for s in lst:</code>
+
+<p>Reminder: this creates a variable named <code>s</code> and sets it = to each elem in the list, one at a time, so in the loop we can say <code>s.lower()</code> or whatever to work on each string.
+
+<p>What happens if we instead write the exclaim function with <code>for s in strs:</code> instead of using the index numbers, like this:
+
+<pre>
+>>> def exclaim(strs):
+...   for s in strs:
+...     s += '!'
+... 
+>>> lst = ['a', 'b' ,'c']
+>>> exclaim(lst)
+>>> 
+>>> # what does lst look like now?
+... 
+>>> lst
+['a', 'b', 'c']
+</pre>
+
+-->
+
+&nbsp;
+
+
+
+
+  </div>
+</body>
+

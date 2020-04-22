@@ -1,0 +1,318 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="//web.stanford.edu/class/cs106a/css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="//web.stanford.edu/class/cs106a/plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="//web.stanford.edu/class/cs106a/plugins/prism/prism.js"></script>
+<link href="//web.stanford.edu/class/cs106a/plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="//web.stanford.edu/class/cs106a/plugins/probability/gaussian.js"></script>
+<script src="//web.stanford.edu/class/cs106a/plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="//web.stanford.edu/class/cs106a/plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</head>
+
+<body>
+
+<nav id="mainNav" class="navbar navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="//web.stanford.edu/class/cs106a/index.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="//web.stanford.edu/class/cs106a/lectures/1-Welcome/"
+							>
+								1. Welcome
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/2-ControlFlow/">
+								2. Control Flow
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/3-Decomposition/">
+								3. Decomposition
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/4-Variables/">
+								4. Variables
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/5-ArithmeticExpressions/">
+								5. Arithmetic Expressions
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/6-ControlFlowRevisited/">
+								6. Control Flow Revisited
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/7-FunctionsAndParameters/">
+								7. Functions Revisited
+							</a>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="//web.stanford.edu/class/cs106a/assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="//web.stanford.edu/class/cs106a/section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/section/section1/Section1.zip">
+								Section 1 Project
+							</a>
+							<a class="dropdown-item" href="https://repl.it/@brahmcapoor/CS106AKarelSection" target="_blank">
+								Section 1 Online IDE
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/section/section1/section1-soln.html">
+								Section 1 Solutions
+							</a>
+							<!-- <hr />
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="https://us.edstem.org/courses/325/lessons/1113" target="_blank">
+								Section 2 Online IDE
+							</a>
+							<!-- <a class="dropdown-item" href="//web.stanford.edu/class/cs106a/section/section2/section2-soln.html">
+								Section 2 Solutions
+							</a> --> 
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=//web.stanford.edu/class/cs106a/handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=//web.stanford.edu/class/cs106a/handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=//web.stanford.edu/class/cs106a/assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=//web.stanford.edu/class/cs106a/handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="//web.stanford.edu/class/cs106a/schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>    <div class="container">
+
+
+
+<h1>Python range() Function</h1>
+
+<p>The python <code>range()</code> function creates a collection of numbers on the fly, like
+0, 1, 2, 3, 4.
+This is very useful, since the numbers can be used to index into collections such as string. The range() function can be called in a few different ways.
+
+<!-- njp could explain about motivation of making index numbers -->
+
+<h2>range(n) - 1 Parameter Form</h2>
+
+<p>The most common form is <code>range(n)</code>, for integer n, which returns a numeric series starting with 0 and extending up to but not including n, e.g. <code>range(5)</code> returns <code>0, 1, 2, 3, 4</code>. This is perfect for generating the index numbers into, for example, a string..
+
+<pre>
+>>> s = 'Python'
+>>> len(s)
+6
+>>> for i in range(len(s)):
+...   print(s[i])
+... 
+P
+y
+t
+h
+o
+n
+</pre>
+
+<p>Below are some more examples calling range(). For cosmetic reasons in the examples below, the call of the range() function is inside a list() so  the numbers will print out. This use of list() is only for printing, not needed to use range() in a loop.
+
+<pre>
+>>> list(range(5))
+[0, 1, 2, 3, 4]
+>>> list(range(10))
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> list(range(2))
+[0, 1]
+</pre>
+
+<p>What is <code>range(0)</code>? Range is supposed to start at 0 and go up to but not including n. It turns out, the "not including" part dominates, so <code>range(0)</code> is no numbers at all.
+
+
+<pre>
+>>> list(range(1))
+[0]
+>>> list(range(0))   # n <= 0, no numbers
+[]
+>>> list(range(-42))
+[]
+</pre>
+
+<h2>reversed() Variation</h2>
+
+<p>Probably the second most common problem is to go through the standard index numbers, but in reverse order. The <code>reversed()</code> function takes in a linear collection and returns a reversed form of it. This works nicely with range() to go over the regular numbers in reverse order:
+
+<pre>
+>>> s = 'Python'
+>>> len(s)
+6
+>>> for i in reversed(range(len(s))):
+...   print(s[i])
+... 
+n
+o
+h
+t
+y
+P
+</pre>
+
+<h2>range(start, stop) - 2 Parameter Form</h2>
+
+<p>Range with 2 parameters specifies a start number other than 0, but is otherwise like the 1 parameter form above, going up to but not equal to the stop number.
+
+<pre>
+>>> list(range(5, 10))
+[5, 6, 7, 8, 9]
+>>> list(range(5, 7))
+[5, 6]
+>>> list(range(5, 6))
+[5]
+>>> list(range(5, 5))  # start >= stop, no numbers
+[]
+>>> list(range(0, 5))
+[0, 1, 2, 3, 4]
+>>> list(range(0, 0))
+[]
+>>> list(range(0, -1))
+[]
+</pre>
+
+<p>Mnemonic: the "stop" number is <b>strong</b>, so as soon as the numbers hit or exceed the stop the range is done (even if the start number initiates things in that position).
+
+
+
+<h2>range(start, stop, step) - 3 Parameter Form</h2>
+
+<p>The 3 parameter form begins with start number, up to but no including the stop number as usual. The difference is the "step" amount between numbers is now custom. Once the number is equal or goes beyond the stop, the range ends. As before, the stop number itself is always omitted.
+
+
+<pre>
+>>> list(range(0, 10, 2))
+[0, 2, 4, 6, 8]
+>>> list(range(0, 10, 6))
+[0, 6]
+>>> list(range(200, 800, 100))
+[200, 300, 400, 500, 600, 700]
+</pre>
+
+<p>If the step is negative, the range decreases from start down to stop. As always, numbers reaching or beyond the stop are omitted, but now step is decreasing.
+
+<pre>
+>>> list(range(10, 5, -1))
+[10, 9, 8, 7, 6]
+>>> list(range(10, 5, -2))
+[10, 8, 6]
+>>> list(range(6, 5, -2))
+[6]
+>>> list(range(5, 5, -2))  # equal to stop is omitted
+[]
+>>> list(range(4, 5, -2))  # beyond the stop is omitted
+[]
+</pre>
+
+</div></body></html>

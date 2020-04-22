@@ -1,0 +1,356 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="//web.stanford.edu/class/cs106a/css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="//web.stanford.edu/class/cs106a/plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="//web.stanford.edu/class/cs106a/plugins/prism/prism.js"></script>
+<link href="//web.stanford.edu/class/cs106a/plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="//web.stanford.edu/class/cs106a/plugins/probability/gaussian.js"></script>
+<script src="//web.stanford.edu/class/cs106a/plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="//web.stanford.edu/class/cs106a/plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</head>
+
+<body>
+
+<nav id="mainNav" class="navbar navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="//web.stanford.edu/class/cs106a/index.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="//web.stanford.edu/class/cs106a/lectures/1-Welcome/"
+							>
+								1. Welcome
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/2-ControlFlow/">
+								2. Control Flow
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/3-Decomposition/">
+								3. Decomposition
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/4-Variables/">
+								4. Variables
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/5-ArithmeticExpressions/">
+								5. Arithmetic Expressions
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/6-ControlFlowRevisited/">
+								6. Control Flow Revisited
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/7-FunctionsAndParameters/">
+								7. Functions Revisited
+							</a>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="//web.stanford.edu/class/cs106a/assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="//web.stanford.edu/class/cs106a/section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/section/section1/Section1.zip">
+								Section 1 Project
+							</a>
+							<a class="dropdown-item" href="https://repl.it/@brahmcapoor/CS106AKarelSection" target="_blank">
+								Section 1 Online IDE
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/section/section1/section1-soln.html">
+								Section 1 Solutions
+							</a>
+							<!-- <hr />
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="https://us.edstem.org/courses/325/lessons/1113" target="_blank">
+								Section 2 Online IDE
+							</a>
+							<!-- <a class="dropdown-item" href="//web.stanford.edu/class/cs106a/section/section2/section2-soln.html">
+								Section 2 Solutions
+							</a> --> 
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=//web.stanford.edu/class/cs106a/handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=//web.stanford.edu/class/cs106a/handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=//web.stanford.edu/class/cs106a/assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=//web.stanford.edu/class/cs106a/handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="//web.stanford.edu/class/cs106a/schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>  <div class="container">
+
+<script>
+// arg is button followed by div which it does show/hide alternately
+function showHide(button) {
+  if (button.nextElementSibling.style.display == "block") {
+    button.nextElementSibling.style.display = "none";
+  } else {
+    button.nextElementSibling.style.display = "block";
+  }
+}
+</script>
+
+<h1>Python main() - Command Line Arguments</h1>
+
+<p>Today's example is the <code>affirm.py</code> program which you can download if you want to try it yourself. Some code is left to be done as an exercise in the file <code>affirm-exercise.py</code>.
+
+<p><a href=affirm.zip>affirm.zip</a>
+
+<h2>Command Line Argument -affirm <i>name</i></h2>
+
+<p>The <code>affirm.py</code> program has a few options to say nice things about a name. Here are three runs of the program in the command line. What the user types is in bold, followed by the program's printed output.
+
+<pre>
+$ <b>python3 affirm.py -affirm Lisa</b>
+Everything is coming up Lisa
+$ <b>python3 affirm.py -affirm Bart</b>
+Looking good Bart
+$ <b>python3 affirm.py -affirm Maggie</b>
+Today is the day for Maggie
+$
+</pre>
+
+<p>Command line arguments, or "args", are extra information typed on the line when a program is run. The system is deceptively simple - the command line arguments are the words typed after the <code>program.py</code> on the command line, separated from each other by spaces. So in the first in this command line:
+
+<pre>
+$ <b>python3 affirm.py -affirm Lisa</b>
+</pre>
+
+<p>The words <code>-affirm</code> and <code>Lisa</code> are the 2 command line args.
+
+<p>
+<img src=//web.stanford.edu/class/cs106a/img/pythonreader/main/python-args.png alt="alt: -affirm and Lisa are the args">
+
+<p>Command line arguments like <code>-affirm</code> often select a mode or option for the run of the program, and these options typically begin with a dash as we have here.
+
+<h2>-hello <i>name</i></h2>
+
+<p>With the <code>-hello</code> option, the program prints a plain hello like this:
+
+<pre>
+$ <b>python3 affirm.py -hello Bart</b>
+Hello Bart
+</pre>
+
+<h2>-n <i>num</i> <i>name</i></h2>
+
+<p>With the <code>-n</code> option, the program prints the name a number of times, like this.
+
+<pre>
+$ <b>python3 affirm.py -n 10 Maggie</b>
+Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie 
+$ <b>python3 affirm.py -n 100 Maggie</b>
+Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie Maggie 
+</pre>
+
+<p>In the examples above, the number of command line arguments is three:  -n, number, name
+
+
+<h2>Command Line Args Python Code</h2>
+
+<pre>
+def main()
+    args = sys.argv[1:]
+    # args is a list of the command line args
+</pre>
+
+<p>The main() above begins with a CS106A standard line <code>args = sys.argv[1:]</code> which sets up a list named <code>args</code> to contain the command line arg strings. This line works and you can always use it. If you want to know what "sys.argv" is about, see the end of this document.
+
+<p>The <code>args</code> list contains one string for each command line argument.
+
+<p>1. For this command line:
+
+<pre>
+$ <b>python3 affirm.py -affirm Lisa</b>
+</pre>
+
+<p>args is the list <code>['-affirm', 'Lisa']</code>
+
+
+<p>2. For this command line
+
+<pre>
+$ <b>python3 affirm.py -n 10 Maggie</b>
+</pre>
+
+<p>args is the list <code>['-n', '10', 'Maggie']</code>
+
+<p>However many command line arguments the user typed in, they will populate the <code>args</code> list. Note that the args in the list are always <b>strings</b>.
+
+
+<h2>How To Write main()</h2>
+
+<p>The code in main() can use a simple series of if-statements to detect the different options, such as <code>-affirm</code>, and run the appropriate code for each option.
+
+<p>For example, consider a run of the program with the <code>-affirm</code> option like this:
+
+<pre>
+$ <b>python3 affirm.py -affirm Lisa</b>
+</pre>
+
+<p>Here is the if-statement in main() which detects this command line option and runs the code for it. The code checks if the number of args is 2, and the first arg (i.e. <code>args[0]</code>) is <code>-affirm</code>. If so, it prints the name which is in <code>args[1]</code> with a random affirmation. 
+
+<pre>
+def main()
+    args = sys.argv[1:]
+    
+    # 1. Check for the arg pattern:
+    #   python3 affirm.py -affirm Bart
+    #   e.g. args[0] is '-affirm' and args[1] is 'Bart'
+    if len(args) == 2 and args[0] == '-affirm':
+        # Select random nice phrase
+        affirmation = random.choice(AFFIRMATIONS)
+        # Print with the name in args[1]
+        print(affirmation, args[1])
+
+    # .. later if statements for -hello and -n ...
+</pre>
+
+<p>Q: Why check if <code>args[0]</code> is equal to <code>'-affirm'</code>?
+
+<p>A: The <code>args</code> list holds the command line args. In this case we want to check if the first command line arg is the string <code>'-affirm'</code>, and <code>args[0]</code> is the first arg.
+
+
+<h2>main() String vs. int</h2>
+
+<p>Consider the use of the -n option
+
+<pre>
+<b>python3 affirm.py -n 10 Maggie</b>
+</pre>
+
+<p>The values in the args list are always <b>strings</b>. In this case args[0] is the string '-n' and args[1] is the string '100'. The code needs to convert the string '100' to the int value 100 using the int() function.
+
+<h2>Examples and Exercises</h2>
+
+<p>The file <code>affirm.py</code> has all three command line options working: -affirm, -hello, -n
+
+<p>You can run the program to see what it does, and look at the main() code as an example.
+
+<p>The file <code>affirm-exercise.py</code> is the same, but does not have the code for -hello and -n, so you can practice coding up those cases.
+
+<h2>What is up With sys.argv?</h2>
+
+<p>The module <code>sys</code> holds interfaces to the operating system, and in particular it contains a list with the unfortunate name <code>argv</code> which holds the command line arguments. However, due to a convention set down in about 1974, the argv list contains an extra string at index 0 which is the name of the script itself, e.g. 'affirm.py'. This extra string is unhelpful. Therefore we create the args list like this:
+
+<pre>
+def main()
+    args = sys.argv[1:]
+</pre>
+
+<p>We choose the more sensible name "args" to hold the command line args, and we use a <i>slice</i> to skip over the unhelpful string at index 0, thus creating a list that is exactly just the command line arguments.
+
+&nbsp;
+
+</div></body></html>

@@ -1,0 +1,310 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="//web.stanford.edu/class/cs106a/css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="//web.stanford.edu/class/cs106a/plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="//web.stanford.edu/class/cs106a/plugins/prism/prism.js"></script>
+<link href="//web.stanford.edu/class/cs106a/plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="//web.stanford.edu/class/cs106a/plugins/probability/gaussian.js"></script>
+<script src="//web.stanford.edu/class/cs106a/plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="//web.stanford.edu/class/cs106a/plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</head>
+
+<body>
+
+<nav id="mainNav" class="navbar navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="//web.stanford.edu/class/cs106a/index.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="//web.stanford.edu/class/cs106a/lectures/1-Welcome/"
+							>
+								1. Welcome
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/2-ControlFlow/">
+								2. Control Flow
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/3-Decomposition/">
+								3. Decomposition
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/4-Variables/">
+								4. Variables
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/5-ArithmeticExpressions/">
+								5. Arithmetic Expressions
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/6-ControlFlowRevisited/">
+								6. Control Flow Revisited
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/lectures/7-FunctionsAndParameters/">
+								7. Functions Revisited
+							</a>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="//web.stanford.edu/class/cs106a/assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="//web.stanford.edu/class/cs106a/section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/section/section1/Section1.zip">
+								Section 1 Project
+							</a>
+							<a class="dropdown-item" href="https://repl.it/@brahmcapoor/CS106AKarelSection" target="_blank">
+								Section 1 Online IDE
+							</a>
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/section/section1/section1-soln.html">
+								Section 1 Solutions
+							</a>
+							<!-- <hr />
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="https://us.edstem.org/courses/325/lessons/1113" target="_blank">
+								Section 2 Online IDE
+							</a>
+							<!-- <a class="dropdown-item" href="//web.stanford.edu/class/cs106a/section/section2/section2-soln.html">
+								Section 2 Solutions
+							</a> --> 
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="//web.stanford.edu/class/cs106a/handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=//web.stanford.edu/class/cs106a/handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=//web.stanford.edu/class/cs106a/handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=//web.stanford.edu/class/cs106a/assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=//web.stanford.edu/class/cs106a/handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="//web.stanford.edu/class/cs106a/schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>    <div class="container">
+
+
+
+<h1>print() and Standard Out</h1>
+
+<p>Every running program has a text output area called "standard out", or sometimes just "stdout".  The Python print() function takes in python data such as ints and strings, and prints those values to standard out.
+
+<p>
+<img src=//web.stanford.edu/class/cs106a/img/pythonreader/print/python-print.png alt="alt: python program runs, each call to print() in the program append a line of text to the standard-out text area">
+
+<p>To say that standard out is "text" here means a series of lines, where each line is a series of chars with a <code>'\n'</code> newline char marking the end of each line. Standard out is relatively simple. It is a single area of text shared by all the code in a program. Each printed line is appended at its end.
+
+<h2>Standard Out in the Terminal</h2>
+
+<p>When you run a program from the terminal, standard out appears right there. Here is example of running the above <code>hello.py</code> in the terminal, and whatever it prints appears immediately in the terminal.
+
+<pre>
+$ <b>python3 hello.py</b>
+hello there
+how are you?
+I am fine
+$
+</pre>
+
+<!-- njp could have introduction of value in memory vs in text form here .. a little abstract! -->
+
+<h2>Print Function</h2>
+
+<p>The Python print() function takes in any number of parameters, and prints them out on one line of text. The items are each converted to text form, separated by spaces, and there is a single <code>'\n'</code> at the end (the "newline" char). When called with zero parameters, print() just prints the <code>'\n'</code> and nothing else. In the interpreter, standard-out displays to the screen in between the '>>>' prompts, so it's an easy way to see what print() does.
+
+<pre>
+>>> print(12, 24, -2)
+12 24 -2
+>>> print('hi', 'there', -2)
+hi there -2
+>>> print('woot')   # 1 item, 1 \n
+woot
+>>> print()         # 0 items, 1 \n
+
+>>>
+</pre>
+
+<p>In Python source code, the text of a string is written with quotes, like <code>'Hello'</code>, so we are very accustomed to seeing that form. Note that printing a string, just prints out the <b>text data</b> of the string with no quotes:
+
+<pre>
+>>> print('Hello')
+Hello
+>>>
+</pre>
+
+<h2>Print Option sep=</h2>
+
+<p>By default, print() separates the items by spaces. The optional <code>sep=</code> parameter sets a different separator text.
+
+<pre>
+>>> print(12, 24, -2, sep=':')
+12:24:-2
+>>> print('but', 'not', 'including', sep='**')
+but**not**including
+>>> print('but', 'not', 'including', sep='')  # empty string
+butnotincluding
+</pre>
+
+<h2>Print Option end=</h2>
+
+<p>By default, print() puts a single <code>'\n'</code> after all the items. The optional <code>end=</code> parameter sets a custom string to appear after all the items. The most common use of this is when printing a string that already has a <code>'\n'</code> at its end. In that case, printing the string ends up double-spacing the output. See how the printed lines each have an extra blank line after them in this example:
+
+<pre>
+>>> print('hello\n')
+hello
+
+>>> print('there\n')
+there
+
+>>>
+</pre>
+
+<p>The issue is that the string has a newline at the end, and then print() adds a second newline, so we get double spacing. The solution is to use <code>end=</code> to specify the empty string as the end of each line.
+
+<pre>
+>>> print('hello\n', end='')
+hello
+>>> print('there\n', end='')
+there
+</pre>
+
+<h2>Print vs. Return</h2>
+
+<p>Thinking about the black-box design of a function, <code>return</code> is the main way for a function to return results back to its caller. Standard-out is a secondary way for a function to communicate data out, but it is much simpler - standard out is textual (typically), and it is shared among all the functions.
+
+<p>Therefore, use the return-value as the main, black-box data output and function testing mechanism. Standard-out is a secondary form of function output, most often used to produce text output for the user in the terminal.
+
+
+<!--
+
+<p>For a function, parameters and the return value are the more structured form of input and output &mdash; each function has its own parameters and return value independent of other functions. The parameters and return value can be used as input/output to write tests about the action of the function, passing in any sort of Python value, not just text.
+
+<p>So for designing or testing a function, concentrate on the parameters and the return value. That is the real data-flow of the function. Standard output is this informal text scratch-pad area that is handy for some purposes, but is not great for expressing the input/output action of a function.
+
+<h2>Text Output</h2>
+
+<p>It is fine for a program to use standard output to print its final results of the end user. Internal helper functions use parameters and return values, so they are testable. Then there are a few functions that do the computation and print results to standard output. 
+-->
+
+
+<h2>Print To File</h2>
+
+<p>The super common case is printing to standard output. However, print() also works printing to an open file.
+
+<p>To open a file for writing, add <code>'w'</code> when calling the open() function (shown below) &mdash; <code>'w'</code> for "writing". This deletes any existing contents of that file, so be careful when opening for writing like this. With the file open, the optional <code>file=</code> parameter to print() directs the text lines into the file instead of writing them to standard output.
+
+<pre>
+with open(filename, 'w') as f:
+    print('Hello world', file=f)
+</pre>
+
+<p>&nbsp;
+
+</div></body></html>

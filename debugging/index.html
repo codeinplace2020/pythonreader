@@ -1,0 +1,270 @@
+<!doctype html>
+<!doctype html>
+
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="../../plugins/prism/prism.js"></script>
+<link href="../../plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="../../plugins/probability/gaussian.js"></script>
+<script src="../../plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="../../plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</head>
+
+<body>
+
+<nav id="mainNav" class="navbar navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="../../index.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="../../lectures/1-Welcome/index.html"
+							>
+								1. Welcome
+							</a>
+							<a class="dropdown-item" href="../../lectures/2-ControlFlow/index.html">
+								2. Control Flow
+							</a>
+							<a class="dropdown-item" href="../../lectures/3-Decomposition/index.html">
+								3. Decomposition
+							</a>
+							<a class="dropdown-item" href="../../lectures/4-Variables/index.html">
+								4. Variables
+							</a>
+							<a class="dropdown-item" href="../../lectures/5-ArithmeticExpressions/index.html">
+								5. Arithmetic Expressions
+							</a>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="../../assn/karel.html"
+								>
+								1 - Karel
+							</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="../../section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="../../section/section1/Section1.zip">
+								Section 1 Project
+							</a>
+							<a class="dropdown-item" href="https://repl.it/@brahmcapoor/CS106AKarelSection" target="_blank">
+								Section 1 Online IDE
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="../../handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=../../handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=../../handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=../../assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=../../handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="../../schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>      <div class="container">
+          <p>Today: loose ends: looking at error messages, more string functions, what is computer hardware?
+
+<h1>Debugging</h1>
+
+<p>Many times you run your code and see an error message. Here are some example debug error messages and how to decode them.
+
+<p>These examples use our old <a href=movie.zip>movie.zip</a> example, editing movie-solution.py to put in some bugs and see what they do.
+
+
+<h2>Bug and Symptom</h2>
+
+<p>A "bug" is a flaw in the code - the code as written does not do what we wanted. Python doe s not notice the bug right away typically. Python does not know what we wanted, it just does what the lines say until it hits an error case, like a bad index or non-existent function name.
+
+<p>When Python hits an error and halts - we'll think of that as the "symptom" you observe. Your job is to work backwards from the symptom to figure out the underlying bug. Very often the symptom is right on the line with the bug, and so it's pretty straightforward. But sometimes it can be more complicated.
+
+
+<h2>scroll_left Grid code</h2>
+
+<p>Here is the correct code for our scroll_left() example. Try putting in various bugs to see the error messages. Run the Doctests to see what we get.
+
+<pre>
+def scroll_left(grid):
+    """
+    Implement scroll_left as in lecture notes.
+    >>> grid = Grid.build([['a', 'b', 'c'], ['d', None, None]])
+    >>> scroll_left(grid)
+    [['b', 'c', None], [None, None, None]]
+    """
+    for y in range(grid.height):
+        for x in range(grid.width):
+            # Copying towards the left
+            # x, y is source, copy to x-1, y
+            val = grid.get(x, y)
+            if x > 0 and val != None:
+                grid.set(x - 1, y, val)
+            grid.set(x, y, None)
+    return grid
+</pre>
+
+
+<h2>1. Bad Function Name: <code>grid.geet()</code></h2>
+
+
+<p>Put a bug in scroll_left() function: <code>grid.geet(x, y)</code>
+
+<pre>
+    for y in range(grid.height):
+        for x in range(grid.width):
+            # Copying towards the left
+            # x, y is source, copy to x-1, y
+            val = <font color=red>grid.geet(x, y)</font>  # line 59
+</pre>
+
+<p>Run the Doctests, the run gets an error. Look at the bottom of the error listing first, work your way upwards. The error identifies the line with the problem, it's a line in your own code. and the error message is reasonable. This is a common, easy case - Python notices the problem right on the line with the wrong code.
+
+<pre>
+      ....
+      File "&lt;doctest scroll_left[1]>", line 1, in <module>
+        scroll_left(grid)
+      File "...movie/movie-solution.py", line 59, in scroll_left
+        val = grid.geet(x, y)
+    AttributeError: 'Grid' object has no attribute 'geet'
+</pre>
+
+
+<h2>2. Error In Downstream Function</h2>
+
+<p>Suppose a() passes bad data to b(), then b() uses the data and crashes. The error message will be in b(), but the real bug is "upstream" in a().
+
+<p>Bug: change x value to be wrong before grid.get() is called...
+
+<pre>
+    for y in range(grid.height):
+        for x in range(grid.width):
+            # Copying towards the left
+            # x, y is source, copy to x-1, y
+            val = grid.get(<font color=red>x + 1000</font>, y)   # line 59
+</pre>
+
+<p>Here is the error message - look at the bottom of the listing and work your way upwards, looking for your function (movie-solution.py) vs. some function you called (grid.py).
+
+<pre>
+      ....
+      File ".../movie/movie-solution.py", line 59, in scroll_left
+        val = grid.get(x + 1000, y)
+      File ".../movie/grid.py", line 76, in get
+        return self.array[y][x]
+    IndexError: list index out of range
+</pre>
+
+<p>Look at the bottom of the error listing and work up. Index-out-of-range error is not our code, it's in grid.py which we did not write. Look up one function, and we see "movie-solution.py line 59", <code>grid.get(x + 1000, y)</code>. This is line that called get() with bad data, leading it to crash.
+
+<p>Or more likely, the logic just above line 59 was missing a &lt; test, or had wrong arithmetic so it <b>set</b> x incorrectly, and that led to the index out of bounds error down in grid.py.
+
+
+
+
+
+      </div>
+</body>
+
+
