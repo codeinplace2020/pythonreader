@@ -136,7 +136,6 @@ ul.CTAs a {
     font-size: 0.9em !important;
     display: block;
     border-radius: 5px;
-    margin-bottom: 5px;
 }
 
 a.download {
@@ -255,7 +254,19 @@ pre {
 
 li {
   /*text-align: justify;*/
-  margin-bottom: 5px;
+}
+
+
+.blue {
+  color:blue;
+}
+
+.console {
+  color:black;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  padding:10px;
 }
 
 code {

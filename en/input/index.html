@@ -110,78 +110,56 @@
     <span></span>
 </button>            
             <div class="page">    
-                <h1>Python Interpreter</h1>
+                <h1><code>input()</code> and Standard In</h1>
                 <hr/>
 
-<p>You write your Python code in a text file with a name like <code>hello.py</code>. How does that code Run? There is program installed on your computer named "python3" or "python", and its job is looking at and running your Python code. This type of program is called an "interpreter".
+<p>A program that runs in the terminal is called a "console program" (console and terminal are practically synonyms). These console programs can become much more interactive if we learn a way for the user to give us some "input". Python has a simple function for doing so, the aptly named <code>input</code> function.
 
-<h2>Talk To The Interpreter</h2>
+<pre class="console">
+def hello():
+    print('hello there')
+    user_status = input('how are you? ')
+    print('you said: ' + user_status)
 
-<p>A nice benefit of using an interpreter is that you can start interactive version of the interpreter and type Python code right into it to see what it does. What happens if you use <code>+</code> in Python code like this: <code>'hello' + 3</code>?
-
-<p>You could look up the answer to this, but a very quick way to find out is to type code into the interpreter and see what it does.
-
-<p>There are 2 ways to get the interpreter:
-
-
-<p>1. Open a command-line terminal. Mac: run the "Terminal" app in the Utilities folder. Windows: type "powershell" in the lower left, this opens the Windows command line terminal. In the terminal type the command "python3" ("python" on Windows). This runs the interpreter program directly. Type ctrl-d to exit when done (on Windows ctrl-z).
-
-<p>2. If you have PyCharm installed, at the lower-left of any window, click the Python Console tab. Or use the Tools &gt; Python Console menu item.
-
-<h2>Working With The Interpreter</h2>
-
-<p>The interpreter prints a ">>>" prompt and waits for you to type some Python code. It reads what you type, evaluates it, and prints the result - the so called read-eval-print loop (here what the user types is shown in bold)
-
-<pre>
->>> <b>1 + 2 * 3</b>
-7
->>> <b>'hello' + 'there'</b>
-'hellothere'
->>> <b>max(1, 5, -2)</b>
-5
->>> <b>'hello' + 2</b>
-TypeError: can only concatenate str (not "int") to str
+def main():
+    hello()
 </pre>
 
-<p>This is an excellent way to experiment with Python features to see how they work. If you have some code you are thinking about, it can be quick and informative to fire up the interpreter, and type the code in to see what it does.
+<h2>Input in the Terminal</h2>
 
-<h2>Indent In Interpreter</h2>
-
-<p>It's possible to write multi-line indented code in the interpreter (we will cover those later in this reader). If a line is not finished, such as ending with ":", hitting return does not run the code right away. You can write further indented lines. When you enter a blank line, the interpreter runs the whole thing. (For throw-away code like this, I am willing to indent just 2 spaces).
+<p>Here is example of running the above <code>hello.py</code> in the terminal. In this example the text written by the user is in <span class="blue">blue</span>.
 
 <pre>
->>> for i in range(10):
-...   mult = i * 100
-...   print(i, mult)
-... 
-0 0
-1 100
-2 200
-3 300
-4 400
-5 500
-6 600
-7 700
-8 800
-9 900
+$ <b>python3 hello.py</b>
+hello there
+how are you? <span class="blue">I am fine</span>
+you said: I am fine
 </pre>
 
-<h2>Interpreter Hacks: dir help</h2>
-
-
-<p>With the special <b>help</b> function, you can pull up the PyDoc for each function (the triple-quote comments for a function). To refer to a function within the <code>str</code> type use the form <code>str.find</code>. Note that the function name is <b>not</b> followed by parenthesis - this is the unusual case of referring to a function but not calling it.
+<h2>Changing variable types</h2>
+<p>When you call the <code>input</code> function, the response entered by the user is given back to you! It is always "returned" as a value of type "str" also known as a string. That is a problem if you want to do any further computation. For example, lets say you wanted to print the value a user entered divided by two:
 
 <pre>
->>> <b>help(str.find)</b>
-find(...)
-    S.find(sub[, start[, end]]) -> int
-    
-    Return the lowest index in S where substring sub is found,
-    such that sub is contained within S[start:end].  Optional
-    arguments start and end are interpreted as in slice notation.
-    
-    Return -1 on failure.
+>>> x = input('enter a value: ')
+enter a value: <span color="blue">42</span>
+>>> print(x)
+42
+>>> print(x/2)
+Traceback (most recent call last):
+  File "&lt;stdin>", line 1, in &lt;module>
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
 </pre>
+
+This is subtle, but recall that every variable has a type. Even though x looks like a number, its type is string. Recall that input always returns a string. The interpreter is complaining that it doesn't make sense to divide a string! Now that you know what the issue is, the fix is simple. You just need to change the variable type to be a float or an int. To do so you can use functions called <code>float</code> and <code>int</code>.
+<pre>
+>>> x_float = float(x)
+>>> print(x_float/2)
+21.0
+</pre>
+
+We can call x_float anything we like. I put the term "float" in the name simply so that you can understand the type just by reading the name.
+
+<p>&nbsp;
                 
             </div>
         </div>
@@ -213,11 +191,6 @@ find(...)
 </script></body>
 
 </html>
-
-
-
-
-
 
 
 
@@ -291,7 +264,6 @@ find(...)
 <body>
     
     <div class="container">
-
 
 
 
