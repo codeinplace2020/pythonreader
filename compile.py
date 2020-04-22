@@ -9,7 +9,8 @@ IGNORE_DIRS = [
     'parts'
 ]
 TEMPLATE_DIR = 'templates'
-ROOT = '../'
+ROOT = 'pythonreader'
+OUT_DIR = 'en'
 
 # Use the -t flag if you want to compile for local tests
 DEPLOY = not '-t' in sys.argv
@@ -35,11 +36,13 @@ class Compiler(object):
         pathToRoot = self.getPathToRoot(relativePath)
         filePath = os.path.join(TEMPLATE_DIR, relativePath)
         templateText = open(filePath).read()
-        compiledHtml = SimpleTemplate(templateText).render(pathToRoot = pathToRoot)
-        self.makePath(relativePath)
+        compiledHtml = SimpleTemplate(templateText).render(pathToRoot = '../' + pathToRoot, pathToLang = pathToRoot)
+        
         fileName, fileExtension = os.path.splitext(relativePath)
         compiledHtml = compiledHtml.encode('utf8')
-        open(relativePath, 'wb').write(compiledHtml)
+        path = OUT_DIR + '/' + relativePath
+        self.makePath(path)
+        open(path, 'wb').write(compiledHtml)
 
     def makePath(self, path):
         dirPath = os.path.dirname(path)

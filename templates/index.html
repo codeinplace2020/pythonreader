@@ -1,103 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+
 <head>
+    
 
     %include templates/parts/head.html
 
 </head>
 
-<body data-spy="scroll" data-target="#toc">
+<body>
 
-    <!-- Navigation Bar -->
-    
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        %include templates/parts/sideBar.html
 
+        <!-- Page Content  -->
+        <div id="content">
 
-
-    <div class="container">
-
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div style="height:20px;"></div>
-                <h1>
-                    CS 106A Python Course Reader
-                </h1>
-                <hr />
-                <p>
-                    These handouts were written by and very kindly shared with us 
-                    by <a href="https://cs.stanford.edu/people/nick/" target="_blank">Nick Parlante</a>.
-                    Material might be presented in a slightly different order to the syllabus this quarter
-                    and they are not required reading, but we hope they are a useful resource. 
-                </p>
-                <ol>
-                    <li>
-                        <a href="{{pathToRoot}}pythonreader/intro">Introduction</a>
-                    </li>
-                    <li>
-                        <a href="{{pathToRoot}}pythonreader/style">Style</a>
-                    </li>
-                    <li>
-                        <a href="{{pathToRoot}}pythonreader/loops">Loops</a>
-                    </li>
-                    <li>
-                        <a href="{{pathToRoot}}pythonreader/range"><code>range</code></a>
-                    </li>
-                    <li>
-                        <a href="{{pathToRoot}}pythonreader/if">If statements</a>
-                    </li>
-                    <li>
-                        <a href="{{pathToRoot}}pythonreader/booleans">Booleans</a>
-                    </li>
-                    <li>
-                        <a href="{{pathToRoot}}pythonreader/functions">Functions</a>
-                    </li>
-                    <li>
-                        <a href="{{pathToRoot}}pythonreader/variables">Variables</a>
-                    </li>
-                    <li>
-                        <a href="{{pathToRoot}}pythonreader/math">Math</a>
-                    </li>
-                    <li>
-                        <a href="{{pathToRoot}}pythonreader/commandline">Command Line</a>
-                    </li>
-                    <li>
-                        <a href="{{pathToRoot}}pythonreader/interpreter">The Python Interpreter</a>
-                    </li>
-                    <li>
-                        <a href="{{pathToRoot}}pythonreader/main"><code>main</code></a>
-                    </li>
-                    <li>
-                        <a href="{{pathToRoot}}pythonreader/lists">Lists</a>
-                    </li>
-                    <li>
-                        <a href="{{pathToRoot}}pythonreader/strings">Strings</a>
-                    </li>
-                    <li>
-                        <a href="{{pathToRoot}}pythonreader/filereading">File Reading</a>
-                    </li>
-                    <li>
-                        <a href="{{pathToRoot}}pythonreader/print"><code>print</code></a>
-                    </li>
-                    <li>
-                        <a href="{{pathToRoot}}pythonreader/dicts">Dicts</a>
-                    </li>
-                    <li>
-                        <a href="{{pathToRoot}}pythonreader/copying">Copying</a>
-                    </li>
-                    <li>
-                        <a href="{{pathToRoot}}pythonreader/sorting">Sorting</a>
-                    </li>
-                    <li>
-                        <a href="{{pathToRoot}}pythonreader/tuples">Tuples</a>
-                    </li>
-                    <li>
-                        <a href="{{pathToRoot}}pythonreader/maplambda"><code>map</code> & <code>lambda</code></a>
-                    </li>
-                    <li>
-                        <a href="{{pathToRoot}}pythonreader/comprehensions">List Comprehensions</a>
-                    </li>
-                </ol>
+            %include templates/parts/sideBarButton.html
+            
+            <div class="page">    
+                <h2>Python Reader</h2>
+                
+            </div>
         </div>
-
     </div>
-    %include templates/parts/footer.html
 
+    %include templates/parts/footer.html
 </body>
+
+</html>

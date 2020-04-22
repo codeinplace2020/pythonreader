@@ -1,20 +1,28 @@
-<!doctype html>
 
+<!DOCTYPE html>
 <html>
 
 <head>
+    
 
     %include templates/parts/head.html
 
 </head>
 
 <body>
-    
-    <div class="container">
 
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        %include templates/parts/sideBar.html
 
+        <!-- Page Content  -->
+        <div id="content">
 
-<h1>Python Interpreter</h1>
+            %include templates/parts/sideBarButton.html
+            
+            <div class="page">    
+                <h1>Python Interpreter</h1>
+                <hr/>
 
 <p>You write your Python code in a text file with a name like <code>hello.py</code>. How does that code Run? There is program installed on your computer named "python3" or "python", and its job is looking at and running your Python code. This type of program is called an "interpreter".
 
@@ -24,14 +32,12 @@
 
 <p>You could look up the answer to this, but a very quick way to find out is to type code into the interpreter and see what it does.
 
-<p>There are 3 ways to get the interpreter:
+<p>There are 2 ways to get the interpreter:
 
-<p>1. On parlante.org, use the <a href='https://parlante.org/console'>hack mode interpreter</a> page (there's a button at bottom of each problem page).
-This is kind of a nick science-project experiment, but it has the virtue that it works in the browser and doesn't depend on having Python installed on your computer.
 
-<p>2. Open a command-line terminal. Mac: run the "Terminal" app in the Utilities folder. Windows: type "powershell" in the lower left, this opens the Windows command line terminal. In the terminal type the command "python3" ("python" on Windows). This runs the interpreter program directly. Type ctrl-d to exit when done (on Windows ctrl-z).
+<p>1. Open a command-line terminal. Mac: run the "Terminal" app in the Utilities folder. Windows: type "powershell" in the lower left, this opens the Windows command line terminal. In the terminal type the command "python3" ("python" on Windows). This runs the interpreter program directly. Type ctrl-d to exit when done (on Windows ctrl-z).
 
-<p>3. If you have PyCharm installed, at the lower-left of any window, click the Python Console tab. Or use the Tools &gt; Python Console menu item.
+<p>2. If you have PyCharm installed, at the lower-left of any window, click the Python Console tab. Or use the Tools &gt; Python Console menu item.
 
 <h2>Working With The Interpreter</h2>
 
@@ -95,6 +101,44 @@ find(...)
     
     Return -1 on failure.
 </pre>
+                
+            </div>
+        </div>
+    </div>
+
+    %include templates/parts/footer.html
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+
+<html>
+
+<head>
+
+    %include templates/parts/head.html
+
+</head>
+
+<body>
+    
+    <div class="container">
+
+
+
+
 
 
 </div></body></html>
