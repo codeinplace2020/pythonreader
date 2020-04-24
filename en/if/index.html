@@ -1,7 +1,8 @@
-<!doctype html>
-<!doctype html>
+<!DOCTYPE html>
+<html>
 
 <head>
+    
 
 <title>Python Reader</title>
 
@@ -61,20 +62,78 @@
 </head>
 
 <body>
-    
-    <div class="container">
-        <h1>If and Comparisons</h1>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+<nav id="sidebar">
+    <div class="sidebar-header">
+        <h3>Python Reader</h3>
+    </div>
+
+    <ul class="list-unstyled components">
+        <p>By Nick Parlante</p>
+        
+        <li>
+            <a href="../intro">Introduction</a>
+        </li>
+
+        <li>
+            <a href="../interpreter">Interpreter</a>
+        </li>
+        
+        <li>
+            <a href="../variables">Variables</a>
+        </li>
+        <li>
+            <a href="../math">Math and expressions</a>
+        </li>
+        <li>
+            <a href="../print"><code>print</code></a>
+        </li>
+        <li>
+            <a href="../input"><code>input</code></a>
+        </li>
+        <li>
+            <a href="../if"><code>if</code> and comparisons</a>
+        </li>
+        <li>
+            <a href="../booleans">Booleans</a>
+        </li>
+        <li>
+            <a href="../while"><code>while</code></a>
+        </li>
+        <li>
+            <a href="../for"><code>for</code></a>
+        </li>
+    </ul>
+
+    <ul class="list-unstyled CTAs">
+        <li>
+            <a href="https://compedu.stanford.edu/codeinplace/v1/#/course" class="download">Back to Code in Place</a>
+        </li>
+    </ul>
+</nav>
+        <!-- Page Content  -->
+        <div id="content">
+
+<button type="button" id="sidebarCollapse" class="mobile-only btn btn-info">
+    <i class="fas fa-align-left"></i>
+    <span></span>
+</button>            
+            <div class="page">    
+                        <h1>If and Comparisons</h1>
+        <hr/>
 
 <p>This page describes the if-statement, <code>==</code> comparisons, if-else and other related structures.
 
 
-<ul>
+<!--<ul>
 <li><a href=#if>If Statement</a></li>
 <li><a href=#else>If Else</a></li>
 <li><a href=#comparison>If Comparisons</a></li>
 <li><a href=#elif>If Elif</a></li>
 <li><a href=#defacto>De-Facto Tests</a></li>
-</ul>
+</ul>-->
 
 
 
@@ -96,19 +155,14 @@ if <i>boolean-test</i>:
 
 <p>The simplest and most common sort of boolean test uses <code>==</code> (two equal signs next to each other) to compare two values, and it's True if the two are the same.
 
-<p>Here is an example that shows an if-statement inside a for-loop. Every time through the loop, the test <code>num == 6</code> is evaluated, yielding the boolean value True or False each time.
+<p>Here is an example that shows an if-statement. The test <code>num == 6</code> is evaluated, yielding the boolean value True.
 
 
 <pre>
->>> for num in [2, 4, 6, 8]:
-        print(num)
-        if num == 6:
-            print('Yay 6!')
-2
-4
-6
+>>> num = 6
+>>> if num == 6:
+...    print('Yay 6!')
 Yay 6!
-8
 </pre>
 
 <h2>If test = vs. == Syntax Error</h2>
@@ -248,24 +302,6 @@ else:
 
 <p>If/else chains are fine, just don't think they are trivial. Only add <code>else</code> if the code needs it. Nice, simple if handles most problems and is the most readable.
 
-<h2>Return vs. if/else chains</h2>
-
-<p>Nick style idea: only use <code>else</code> when it is truly needed. If the code can work using only a plain-if, I prefer to write it that way. This works extra well with decomposed out functions, where 'return' can be used to bail out for the first few cases, leaving the main case below without indentation, like this:
-
-<pre>
-def foo(s):
-    if len(s) < 4:
-        return 'too small!'
-
-    if len(s) > 100:
-        return 'too big!'
-
-    # rest of computation having screened out too-short and too-long
-    # notice: no if-else structure, not indented down here
-    ...
-</pre>
-
-<p>You can use else if you prefer, just thinking about possible alternative structure here.
 
 <!-- link to here to introduce boolean idea -->
 
@@ -320,8 +356,36 @@ if len(s) > 0:
 if s:
     print(s)
 </pre>
+<hr/>
 
+
+
+            </div>
+        </div>
     </div>
-</body>
 
 
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!-- Popper.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<!-- jQuery Custom Scroller CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#sidebar").mCustomScrollbar({
+            theme: "minimal"
+        });
+
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar, #content').toggleClass('active');
+            $('.collapse.in').toggleClass('in');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    });
+</script></body>
+
+</html>

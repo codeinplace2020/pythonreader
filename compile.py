@@ -33,10 +33,10 @@ class Compiler(object):
 
     def compileTemplate(self, relativePath):
         print(relativePath)
-        pathToRoot = self.getPathToRoot(relativePath)
+        pathToLangRoot = self.getPathToRoot(relativePath)
         filePath = os.path.join(TEMPLATE_DIR, relativePath)
         templateText = open(filePath).read()
-        compiledHtml = SimpleTemplate(templateText).render(pathToRoot = '../' + pathToRoot, pathToLang = pathToRoot)
+        compiledHtml = SimpleTemplate(templateText).render(pathToRoot = '../' + pathToLangRoot, pathToLang = pathToLangRoot)
         
         fileName, fileExtension = os.path.splitext(relativePath)
         compiledHtml = compiledHtml.encode('utf8')

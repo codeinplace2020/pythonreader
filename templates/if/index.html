@@ -1,27 +1,17 @@
-<!doctype html>
-<!doctype html>
-
-<head>
-
-    %include templates/parts/head.html
-
-</head>
-
-<body>
-    
-    <div class="container">
+%rebase templates/parts/chapter.html
         <h1>If and Comparisons</h1>
+        <hr/>
 
 <p>This page describes the if-statement, <code>==</code> comparisons, if-else and other related structures.
 
 
-<ul>
+<!--<ul>
 <li><a href=#if>If Statement</a></li>
 <li><a href=#else>If Else</a></li>
 <li><a href=#comparison>If Comparisons</a></li>
 <li><a href=#elif>If Elif</a></li>
 <li><a href=#defacto>De-Facto Tests</a></li>
-</ul>
+</ul>-->
 
 
 
@@ -43,19 +33,14 @@ if <i>boolean-test</i>:
 
 <p>The simplest and most common sort of boolean test uses <code>==</code> (two equal signs next to each other) to compare two values, and it's True if the two are the same.
 
-<p>Here is an example that shows an if-statement inside a for-loop. Every time through the loop, the test <code>num == 6</code> is evaluated, yielding the boolean value True or False each time.
+<p>Here is an example that shows an if-statement. The test <code>num == 6</code> is evaluated, yielding the boolean value True.
 
 
 <pre>
->>> for num in [2, 4, 6, 8]:
-        print(num)
-        if num == 6:
-            print('Yay 6!')
-2
-4
-6
+>>> num = 6
+>>> if num == 6:
+...    print('Yay 6!')
 Yay 6!
-8
 </pre>
 
 <h2>If test = vs. == Syntax Error</h2>
@@ -195,24 +180,6 @@ else:
 
 <p>If/else chains are fine, just don't think they are trivial. Only add <code>else</code> if the code needs it. Nice, simple if handles most problems and is the most readable.
 
-<h2>Return vs. if/else chains</h2>
-
-<p>Nick style idea: only use <code>else</code> when it is truly needed. If the code can work using only a plain-if, I prefer to write it that way. This works extra well with decomposed out functions, where 'return' can be used to bail out for the first few cases, leaving the main case below without indentation, like this:
-
-<pre>
-def foo(s):
-    if len(s) < 4:
-        return 'too small!'
-
-    if len(s) > 100:
-        return 'too big!'
-
-    # rest of computation having screened out too-short and too-long
-    # notice: no if-else structure, not indented down here
-    ...
-</pre>
-
-<p>You can use else if you prefer, just thinking about possible alternative structure here.
 
 <!-- link to here to introduce boolean idea -->
 
@@ -267,8 +234,6 @@ if len(s) > 0:
 if s:
     print(s)
 </pre>
-
-    </div>
-</body>
+<hr/>
 
 

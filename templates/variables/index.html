@@ -1,28 +1,8 @@
 
-<!DOCTYPE html>
-<html>
+%rebase templates/parts/chapter.html
 
-<head>
-    
-
-    %include templates/parts/head.html
-
-</head>
-
-<body>
-
-    <div class="wrapper">
-        <!-- Sidebar  -->
-        %include templates/parts/sideBar.html
-
-        <!-- Page Content  -->
-        <div id="content">
-
-            %include templates/parts/sideBarButton.html
-            
-            <div class="page">    
-                <h1>Python Variables</h1>
-                <hr/>
+<h1>Variables</h1>
+<hr/>
 
 <p>A Python variable represents a little bit of memory, keeping track of a value as the code runs. 
 
@@ -144,12 +124,6 @@ is one funny feature of variable names to know.
 <p>This is <b>exactly</b> the same computation, just using different variable names. What matters in a computation is the structure &mdash; which value is used at each spot in the computation. The variable names are just labels on the computation. If we change a variable name consistently throughout the code, the computation will work the same.
 
 <p>That said, though variable names are superficial, good code uses meaningful variable names, reflecting the role of that data in the algorithm.
-                <hr/>
-            </div>
-        </div>
-    </div>
+       
 
-    %include templates/parts/footer.html
-</body>
-
-</html>
+<hr/>         
