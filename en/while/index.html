@@ -267,59 +267,7 @@ print('All done')
 0
 All done
 </pre>
-<a name=standard>
-<h2>Standard Loop Phrases</h2>
 
-
-<p>Looping over collections is very common. Here are the most important patterns.
-
-
-
-<h3>1. Loop Over a List</h3>
-
-<p>The for-loop will see each element in the list once. There are no index numbers in this form.
-
-<pre>
-words = ['hi', 'there!', ...]
-for word in words:
-    # use word in here
-    print(word)
-</pre>
-
-
-
-
-<h3>2. Loop Over Int Range</h3>
-
-<p>Use range() to create a series of numbers, and nest that in a for-loop to take some action with each number.
-
-<pre>
-for i in range(10):
-  print(i)
-# 0 1 2 3 4 5 6 7 8 9
-</pre>
-
-
-<h3>3. Loop Over All Index Numbers</h3>
-
-<p>For a linear collections (e.g. list, string), index numbers 0, 1, ... len-1 indentify each element in the collection. The following loop combines for/range/len to run a variable i through all the index numbers in a string or list.
-
-<p>Code inside the loop can use <code>[i]</code> or a slice or whatever to access into the collection based on <code>i</code>. Use this form if the algorithm needs access to the index numbers, not just the bare elements.
-
-<pre>
-# string s, loop though all its chars by index number
-s = 'Hello'
-for i in range(len(s)):  # i.e. range(5)
-  print(i, s[i])
-
-0 H
-1 e
-2 l
-3 l
-4 0
-</pre>
-
-<p>It's standard to use the one-letter variable names <code>i, j, k</code> for looping through index numbers like this (echoing use of subscripts i, j, k in mathematical writing before computers existed).
 
 <hr/>
 
