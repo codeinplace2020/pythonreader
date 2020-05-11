@@ -1,29 +1,18 @@
-<!doctype html>
-<!doctype html>
-
-<head>
-
-    %include templates/parts/head.html
-
-</head>
-
-<body>
-    
-    <div class="container">
-        <h1>Python File Reading</h1>
+%rebase templates/parts/chapter.html
+<h1>Python File Reading</h1>
+<hr/>
 
 <p>Python makes it easy to read the data out of a text file. There are a few different forms, depending on if you want to process the file line by line or all at once.
 
-<p>Here is the canonical code to open a file, read all the lines out of it, handling one line at a time.
+<p>Here is the easiest code to open a file, read all the lines out of it, handling one line at a time.
 
 <pre>
-with open(filename) as f:
-    for line in f:
-        # look at line in loop
-        print(line, end='')
+for line in <b>open(filename)</b>:
+    # look at line in loop
+    print(line.strip()) # strip removes white space at the start and end of the string
 </pre>
 
-<p>Can be written this way: <code>open(filename, 'r')</code> where the 'r' means reading. Reading mode is the default, so the 'r' can be omitted as above. The mode <code>'w'</code> is for file writing, shown below.
+<p>Notice the open function. That reads a file and the for-each loop accesses the contents of the file one line at a time. The open function can also be written this way: <code>open(filename, 'r')</code> where the 'r' means reading. Reading mode is the default, so the 'r' can be omitted as above. The mode <code>'w'</code> is for file writing, shown below.
 
 <p>When reading lines out of a file, each line has a '\n' char at its end.
 The lines from the file are fundamentally <b>text</b>. Use functions like int() to convert text to int:
@@ -47,10 +36,21 @@ The lines from the file are fundamentally <b>text</b>. Use functions like int() 
 <pre>
 >>> line = '   this   \n'
 >>> line.strip()
-'this'
+'this'  
 </pre>
 
 <p>The advantage of processing 1 line at a time is that it does not require memory to hold every byte of the file at once. It's not uncommon to have a text file with millions of lines of data. With this form, only one line at a time must be stored in RAM, not all of the lines at once.
+
+<h2><code>with</code> for cleanest file handling</h2>
+
+<p>When you open a file, python doesn't always know exactly when is the right time to close the file up and allow other users on the computer to read and write to it. Often that doesn't matter, but in programs you write after this class it might matter. You can use a special <code>with</code> operator to make your code slightly more robust. It creates a code block and "closes" the file when the code block ends.
+
+<pre>
+with open(filename) as f:
+    for line in f:
+        # look at line in loop
+        print(line.strip()) # strip removes white space at the start and end of the strings
+</pre>    
 
 <h2>Unicode Encoding</h2>
 
@@ -165,10 +165,5 @@ Opposite or reading!
 </pre>
 
 &nbsp;
-
-    </div>
-</body>
-
-
 
 

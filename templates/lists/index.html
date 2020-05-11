@@ -1,28 +1,8 @@
-<!doctype html>
-<!doctype html>
-
-<head>
-
-  %include templates/parts/head.html
-
-</head>
-
-<body>
-  
-  <div class="container">
-    <script>
-// arg is button followed by div which it does show/hide alternately
-function showHide(button) {
-  if (button.nextElementSibling.style.display == "block") {
-    button.nextElementSibling.style.display = "none";
-  } else {
-    button.nextElementSibling.style.display = "block";
-  }
-}
-</script>
+%rebase templates/parts/chapter.html
 
 
 <h1>Python Lists</h1>
+<hr/>
 
 <p>A list contains series of any data type: strings, ints, other lists. The things inside a list are generically called "elements". Unlike strings, lists are "mutable" - they can be changed.
 
@@ -279,6 +259,3 @@ for i in range(10):
 
 <p>Del works with dicts too.
 
-
-  </div>
-</body>

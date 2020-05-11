@@ -1,29 +1,8 @@
-<!doctype html>
-<!doctype html>
-
-<head>
-
-    %include templates/parts/head.html
-
-</head>
-
-<body>
-    
-    <div class="container">
-        <script>
-// arg is button followed by div which it does show/hide alternately
-function showHide(button) {
-  if (button.nextElementSibling.style.display == "block") {
-    button.nextElementSibling.style.display = "none";
-  } else {
-    button.nextElementSibling.style.display = "block";
-  }
-}
-</script>
-
+%rebase templates/parts/chapter.html
 
 
 <h1>Python Dict</h1>
+<hr/>
 
 <p>The dict "dictionary" type is very important because it takes in disorganized data, organizes it,
 and it is <b>fast</b>. The dict here is based on the "hash table" data structure.
@@ -223,6 +202,3 @@ for key,value in d.items():
 <p>This is a special version of the for loop, where there are multiple variables, and the number of variables matches the size of a tuples coming off the list. The above example, looping key,value over dict.items() is probably the most common use of this multiple-variable variant of the for loop.
 
 
-
-    </div>
-</body>
