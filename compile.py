@@ -62,7 +62,6 @@ class Compiler(object):
         for i in range(depth, 0, -1):
             curr = dirs[i]
             pathToRoot += '../'
-        print(relativePath, pathToRoot)
         return pathToRoot
 
     def splitDirs(self, filePath):
